@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - API", "1 - API", "{C849125F-BC77-4ED3-998E-4EB94A8A4A2C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{0D1B1184-840C-4585-8ACE-9EF1B2C65A11}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", "{ACB353D3-5F20-45E2-92BE-CA34764DF520}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Services", "3 - Services", "{2941F3E3-C780-4B00-858B-0B7F9FD074D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infrastructure", "5 - Infrastructure", "{493897C2-A301-45C0-B517-9874C23AEE67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - IoC", "6 - IoC", "{44289BA9-46E7-41E5-B3B2-9A8D799CC51B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7 - Tests", "7 - Tests", "{D02B8D09-305F-423A-BDD4-9FC2200DA952}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaGamesLambda3.API", "src\CopaGamesLambda3.API\CopaGamesLambda3.API.csproj", "{B8317CC2-5BD6-4DDD-A967-BF15AA4C6548}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaGamesLambda3.Application", "src\CopaGamesLambda3.Application\CopaGamesLambda3.Application.csproj", "{BC281967-377B-4243-92DD-997CE0D63D24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaGamesLambda3.Services", "src\CopaGamesLambda3.Services\CopaGamesLambda3.Services.csproj", "{583F8A4A-D216-4A6B-8E03-FE6080C87338}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaGamesLambda3.Domain", "src\CopaGamesLambda3.Domain\CopaGamesLambda3.Domain.csproj", "{AC7830E3-CB9A-4DD5-82C7-8914241E0D78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaGamesLambda3.Infrastructure", "src\CopaGamesLambda3.Infrastructure\CopaGamesLambda3.Infrastructure.csproj", "{97533336-6782-410B-AA11-62940BF0720A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaGamesLambda3.IoC", "src\CopaGamesLambda3.IoC\CopaGamesLambda3.IoC.csproj", "{513FEE4D-EC40-4F4E-A040-24E65DF97828}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopaGamesLambda3.Tests", "src\CopaGamesLambda3.Tests\CopaGamesLambda3.Tests.csproj", "{50DC0DB4-FAD4-4AED-A8B8-09A8A72AF684}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8317CC2-5BD6-4DDD-A967-BF15AA4C6548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8317CC2-5BD6-4DDD-A967-BF15AA4C6548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8317CC2-5BD6-4DDD-A967-BF15AA4C6548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8317CC2-5BD6-4DDD-A967-BF15AA4C6548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC281967-377B-4243-92DD-997CE0D63D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC281967-377B-4243-92DD-997CE0D63D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC281967-377B-4243-92DD-997CE0D63D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC281967-377B-4243-92DD-997CE0D63D24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{583F8A4A-D216-4A6B-8E03-FE6080C87338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{583F8A4A-D216-4A6B-8E03-FE6080C87338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{583F8A4A-D216-4A6B-8E03-FE6080C87338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{583F8A4A-D216-4A6B-8E03-FE6080C87338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC7830E3-CB9A-4DD5-82C7-8914241E0D78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC7830E3-CB9A-4DD5-82C7-8914241E0D78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC7830E3-CB9A-4DD5-82C7-8914241E0D78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC7830E3-CB9A-4DD5-82C7-8914241E0D78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97533336-6782-410B-AA11-62940BF0720A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97533336-6782-410B-AA11-62940BF0720A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97533336-6782-410B-AA11-62940BF0720A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97533336-6782-410B-AA11-62940BF0720A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{513FEE4D-EC40-4F4E-A040-24E65DF97828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{513FEE4D-EC40-4F4E-A040-24E65DF97828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{513FEE4D-EC40-4F4E-A040-24E65DF97828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{513FEE4D-EC40-4F4E-A040-24E65DF97828}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50DC0DB4-FAD4-4AED-A8B8-09A8A72AF684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50DC0DB4-FAD4-4AED-A8B8-09A8A72AF684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50DC0DB4-FAD4-4AED-A8B8-09A8A72AF684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50DC0DB4-FAD4-4AED-A8B8-09A8A72AF684}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B8317CC2-5BD6-4DDD-A967-BF15AA4C6548} = {C849125F-BC77-4ED3-998E-4EB94A8A4A2C}
+		{BC281967-377B-4243-92DD-997CE0D63D24} = {0D1B1184-840C-4585-8ACE-9EF1B2C65A11}
+		{583F8A4A-D216-4A6B-8E03-FE6080C87338} = {2941F3E3-C780-4B00-858B-0B7F9FD074D7}
+		{AC7830E3-CB9A-4DD5-82C7-8914241E0D78} = {ACB353D3-5F20-45E2-92BE-CA34764DF520}
+		{97533336-6782-410B-AA11-62940BF0720A} = {493897C2-A301-45C0-B517-9874C23AEE67}
+		{513FEE4D-EC40-4F4E-A040-24E65DF97828} = {44289BA9-46E7-41E5-B3B2-9A8D799CC51B}
+		{50DC0DB4-FAD4-4AED-A8B8-09A8A72AF684} = {D02B8D09-305F-423A-BDD4-9FC2200DA952}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A4A01B5-0CA1-42A8-84ED-D52D1AE164D6}
+	EndGlobalSection
+EndGlobal
