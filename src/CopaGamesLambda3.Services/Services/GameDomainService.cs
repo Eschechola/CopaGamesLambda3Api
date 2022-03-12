@@ -4,6 +4,7 @@ using CopaGamesLambda3.Infrastructure.Communication.Refit;
 using CopaGamesLambda3.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace CopaGamesLambda3.Services
 {
@@ -89,11 +90,13 @@ namespace CopaGamesLambda3.Services
 
         private IList<Game> GetFirstPhaseWinners(IList<Game> games)
         {
+            games = GetGamesOrderedByTitle(games);
+
             var winners = new List<Game>();
-            var matchsCount = games.Count / 2;
+            var matchesCount = games.Count / 2;
             var opponetCounter = games.Count - 1;
 
-            for(int i = 0; i < matchsCount; i++)
+            for(int i = 0; i < matchesCount; i++)
             {
                 var firtOpponent = games[i];
                 var secondOpponent = games[opponetCounter];
@@ -111,20 +114,23 @@ namespace CopaGamesLambda3.Services
         {
             if (secondOpponent.Rating == firstOpponent.Rating)
             {
-                if (secondOpponent.Year > firstOpponent.Year)
+                if (secondOpponent.IsOlderThan(firstOpponent))
                     return secondOpponent;
 
-                if (firstOpponent.Year > secondOpponent.Year)
+                if (firstOpponent.IsOlderThan(secondOpponent))
                     return firstOpponent;
 
-                if (secondOpponent.Title.CompareTo(firstOpponent.Title) == -1)
+                if (secondOpponent.IsAlphabeticallySmaller(firstOpponent))
                     return secondOpponent;
             }
 
-            if (secondOpponent.Rating > firstOpponent.Rating)
+            if (secondOpponent.HasABetterHating(firstOpponent))
                 return secondOpponent;
 
             return firstOpponent;
         }
+
+        private IList<Game> GetGamesOrderedByTitle(IList<Game> games)
+            => games.OrderBy(x=>x.Title).ToList();
     }
 }

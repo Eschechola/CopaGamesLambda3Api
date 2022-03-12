@@ -21,5 +21,15 @@
             Year = year;
             UrlImage = urlImage;
         }
+
+
+        public bool IsOlderThan(Game game)
+            => Year < game.Year;
+
+        public bool IsAlphabeticallySmaller(Game game)
+            => Title.CompareTo(game.Title) == -1;
+
+        public bool HasABetterHating(Game game)
+            => Rating > game.Rating;
     }
 }
