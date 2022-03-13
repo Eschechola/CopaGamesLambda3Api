@@ -10,6 +10,7 @@
     <PackageReference Include="Bogus" Version="34.0.1" />
     <PackageReference Include="Bogus.Hollywood" Version="34.0.1" />
     <PackageReference Include="FluentAssertions" Version="6.5.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="5.0.15" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
     <PackageReference Include="Moq" Version="4.17.2" />
     <PackageReference Include="xunit" Version="2.4.1" />
@@ -24,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CopaGamesLambda3.API\CopaGamesLambda3.API.csproj" />
     <ProjectReference Include="..\CopaGamesLambda3.IoC\CopaGamesLambda3.IoC.csproj" />
     <ProjectReference Include="..\CopaGamesLambda3.Services\CopaGamesLambda3.Services.csproj" />
   </ItemGroup>

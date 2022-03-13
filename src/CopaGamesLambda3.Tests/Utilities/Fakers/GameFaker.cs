@@ -9,20 +9,27 @@ namespace CopaGamesLambda3.Tests.Utilities.Fakers
 {
     public static class GameFaker
     {
-        public static Game GetRandom()
+        public static Game GetRandom(
+            string id = null,
+            string title = null,
+            double? rating = null,
+            int minRating = 1,
+            int maxRating = 100,
+            int? year = null,
+            string urlImage = null)
             => new Game(
-                id: new Internet().Url(),
-                title: new Movie().Title,
-                rating: new Randomizer().Double(1, 100),
-                year: new Randomizer().Int(1980, DateTime.UtcNow.Year),
-                urlImage: new Internet().Url());
+                id: id ?? new Internet().Url(),
+                title: title ?? new Movie().Title,
+                rating: rating ?? new Randomizer().Double(minRating, maxRating),
+                year: year ?? new Randomizer().Int(1980, DateTime.UtcNow.Year),
+                urlImage: urlImage ?? new Internet().Url());
 
-        public static IList<Game> GetRandomList(int count = 8)
+        public static IList<Game> GetRandomList(int count = 8, int minRating = 1, int maxRating = 100)
         {
             var games = new List<Game>();
 
             for(int i = 0; i < count; i++)
-                games.Add(GetRandom());
+                games.Add(GetRandom(minRating: minRating, maxRating: maxRating));
 
             return games;
         }
