@@ -115,19 +115,19 @@ namespace CopaGamesLambda3.Services
             if (secondOpponent.Rating == firstOpponent.Rating)
             {
                 if (secondOpponent.IsOlderThan(firstOpponent))
-                    return secondOpponent;
-
-                if (firstOpponent.IsOlderThan(secondOpponent))
                     return firstOpponent;
 
-                if (secondOpponent.IsAlphabeticallySmaller(firstOpponent))
+                if (firstOpponent.IsOlderThan(secondOpponent))
                     return secondOpponent;
+
+                if (secondOpponent.IsAlphabeticallySmaller(firstOpponent))
+                    return firstOpponent;
             }
 
-            if (secondOpponent.HasABetterHating(firstOpponent))
-                return secondOpponent;
+            if (firstOpponent.HasABetterHating(secondOpponent))
+                return firstOpponent;
 
-            return firstOpponent;
+            return secondOpponent;
         }
 
         private IList<Game> GetGamesOrderedByTitle(IList<Game> games)
