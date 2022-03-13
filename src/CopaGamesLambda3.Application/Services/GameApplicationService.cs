@@ -21,12 +21,7 @@ namespace CopaGamesLambda3.Application.Services
             _mapper = mapper;
         }
 
-        public Task<IList<GameDTO>> GetGamesAsync()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public async Task<IList<GameDTO>> GetMatchFinalists()
+        public async Task<IList<GameDTO>> GetGamesAsync()
         {
             var games = await _gameDomainService.GetGamesAsync();
             return _mapper.Map<IList<GameDTO>>(games);
