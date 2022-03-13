@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CopaGamesLambda3.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class GameController : ControllerBase
     {
@@ -25,7 +25,7 @@ namespace CopaGamesLambda3.API.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        [Route("get-all-games")]
+        [Route("get-all")]
         public async Task<IActionResult> GetGamesAsync()
         {
             try
@@ -71,7 +71,12 @@ namespace CopaGamesLambda3.API.Controllers
 
                 var matchFinalists = _gameApplicationService.GetMatchFinalists(startMatchesViewModel.Games);
 
-                return Ok(matchFinalists);
+                return Ok(new ResultViewModel
+                {
+                    Message = "Successful completed matches",
+                    Success = true,
+                    Data = matchFinalists,
+                });
             }
             catch (Exception error)
             {
