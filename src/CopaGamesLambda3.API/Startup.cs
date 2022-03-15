@@ -34,6 +34,11 @@ namespace CopaGamesLambda3.API
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CopaGamesLambda3.API v1"));
+
+                app.UseCors(options
+                    => options.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
             }
 
             app.UseHttpsRedirection();
