@@ -4,35 +4,45 @@
 
 <br>
 
-## How to run
+## How to run - API
 
 <br>
 
-1. Clone the repository
+1. Download .NET 5 SDK <a href="https://dotnet.microsoft.com/en-us/download/dotnet/5.0">here</a>
+
+<br>
+
+2. Clone the repository
+    
     ```bash
-    $ git clone https://github.com/<organization>/<repository>.git
+    $ git clone https://github.com/Eschechola/CopaGamesLambda3Api.git
     ```
 
-2. Clean, restore and build
+<br>
+
+3. Clean, restore and build
+    
     ```bash
-    $ cd <project-folder>
+    $ cd LucasEschechola-10-03-2022/CopaGamesLambda3Api
     $ dotnet clean
     $ dotnet restore
     $ dotnet build 
     ```
-    
-3. Add enviroment variables
-    <br><br>3.1. Init user secrets
+
+<br>
+
+4. Add enviroment variables
+    <br><br>4.1. Init user secrets
     ```bash
     $ dotnet user-secrets init --project .\src\CopaGamesLambda3.API\CopaGamesLambda3.API.csproj
     ```
 
-    <br>3.2. Add games api url
+    <br>4.2. Add games api url
     ```bash
     $ dotnet user-secrets set "APIs:GamesApiUrl" "https://l3-processoseletivo.azurewebsites.net/api" --project .\src\CopaGamesLambda3.API\CopaGamesLambda3.API.csproj
     ```
 
-    <br>4. Run the project!
+    <br>5. Run the project!
     ```bash
     $ dotnet run 
     ```
@@ -40,4 +50,5 @@
 
 
 <br><br>
+
 <p align="center"><strong>2022</strong></p>
